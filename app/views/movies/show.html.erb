@@ -10,6 +10,15 @@
   <%= @movie.director.name %>
 </p>
 
+<p>
+  <b><%= pluralize(@movie.roles.count, "Role") %></b>
+  <ul>
+  <% @movie.roles.each do |role|  %>
+    <li><%= role.name %></li>
+  <% end %>
+  </ul>
+</p>
+
 
 <%= link_to 'Edit', edit_movie_path(@movie) %> |
 <%= link_to 'Back', movies_path %>
