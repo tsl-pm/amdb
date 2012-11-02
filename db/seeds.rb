@@ -9,14 +9,33 @@
 Director.destroy_all
 Movie.destroy_all
 
-george = Director.create :name => "George Lucas"
-ron = Director.create :name => "Ron Howard"
-steven = Director.create :name => "Steven Spielberg"
+directors = [
+  { :name => "Christopher Nolan", :dob => "07/30/1970" },
+  { :name => "Francis Ford Coppola", :dob => "04/07/1939" },
+  { :name => "Frank Darabont", :dob => "01/29/1959" },
+  { :name => "Ron Howard", :dob => "03/01/1954" },
+  { :name => "George Lucas", :dob => "05/14/1944" },
+  { :name => "Steven Spielberg", :dob => "12/18/1946" }
+]
 
-Movie.create :title => "Star Wars", :director_id => george.id
-Movie.create :title => "Apollo 13", :director_id => ron.id
-Movie.create :title => "Raiders", :director_id => steven.id
-Movie.create :title => "Jaws", :director_id => steven.id
+movies = [
+  { :title => "Star Wars: A New Hope", :year => 1977, :director => "George Lucas" },
+  { :title => "E.T.", :year => 1977, :director => "Steven Spielberg" },
+  { :title => "Raiders of the Lost Ark", :year => 1977, :director => "Steven Spielberg" },
+  { :title => "Apollo 13", :year => 1977, :director => "Ron Howard" },
+  { :title => "Minority Report", :year => 1977, :director => "Steven Spielberg" },
+  { :title => "The Dark Knight", :year => 2008, :director => "Christopher Nolan" },
+  { :title => "The Godfather", :year => 1972, :director => "Francis Ford Coppola" },
+  { :title => "The Godfather: Part II", :year => 1974, :director => "Francis Ford Coppola" },
+  { :title => "The Shawshank Redemption", :year => 1994, :director => "Frank Darabont" },
+]
+
+Director.create directors
+
+movies.each do |movie|
+  d = Director.find_by_name(movie[:director])
+  Movie.create :title => movie[:title], :year => movie[:year], :director_id => d.id
+end
 
 
 

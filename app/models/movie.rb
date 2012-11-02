@@ -1,10 +1,6 @@
 class Movie < ActiveRecord::Base
-  attr_accessible :director_id, :title
+  attr_accessible :director_id, :title, :year
   
-  def director
-    Director.find_by_id(self.director_id)
-  end
-  
-  
+  # belongs to director
   
 end
