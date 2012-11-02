@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <nav>
+    <%= link_to "Home", root_url %> |
+    <%= link_to "Directors", directors_url %> |
+    <%= link_to "Movies", movies_url %> |
+    <%= link_to "Roles", roles_url %> |
+    <%= link_to "Actors", actors_url %>
+  </nav>
+  <%= yield %>
 
 </body>
 </html>

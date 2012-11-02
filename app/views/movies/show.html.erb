@@ -13,7 +13,7 @@
 <p>
   <b><%= pluralize(@movie.roles.count, "Role") %></b>
   <ul>
-  <% @movie.roles.each do |role|  %>
+  <% @movie.roles.each do |role| %>
     <li><%= role.name %></li>
   <% end %>
   </ul>

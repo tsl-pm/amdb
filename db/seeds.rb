@@ -60,6 +60,7 @@ roles.each do |role|
   Role.create :name => role[:name], :movie_id => m.id
 end
 
+Actor.create actors
 
 
 

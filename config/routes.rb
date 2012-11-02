@@ -1,4 +1,9 @@
 Amdb::Application.routes.draw do
+  
+  resources :actors
+
+  root :to => 'Movies#index'
+  
   resources :roles
 
   resources :movies
