@@ -12,20 +12,20 @@ Movie.destroy_all
 Role.destroy_all
 
 directors = [
-  { :name => "Christopher Nolan", :dob => "07/30/1970" },
-  { :name => "Francis Ford Coppola", :dob => "04/07/1939" },
-  { :name => "Frank Darabont", :dob => "01/29/1959" },
-  { :name => "Ron Howard", :dob => "03/01/1954" },
-  { :name => "George Lucas", :dob => "05/14/1944" },
-  { :name => "Steven Spielberg", :dob => "12/18/1946" }
+  { :name => "Christopher Nolan", :dob => Date.parse("30/07/1970") },
+  { :name => "Francis Ford Coppola", :dob => Date.parse("07/04/1939") },
+  { :name => "Frank Darabont", :dob => Date.parse("28/01/1959") },
+  { :name => "Ron Howard", :dob => Date.parse("01/03/1954") },
+  { :name => "George Lucas", :dob => Date.parse("14/05/1944") },
+  { :name => "Steven Spielberg", :dob => Date.parse("18/12/1946") }
 ]
 
 actors = [
-  { :name => "Christian Bale", :dob => "01/30/1974" },
-  { :name => "Al Pacino", :dob => "04/25/1940" },
-  { :name => "Tim Robbins", :dob => "10/16/1958" },
-  { :name => "Harrison Ford", :dob => "07/13/1942" },
-  { :name => "Morgan Freeman", :dob => "06/01/1937" }
+  { :name => "Christian Bale", :dob => Date.parse("30/01/1974") },
+  { :name => "Al Pacino", :dob => Date.parse("25/04/1940") },
+  { :name => "Tim Robbins", :dob => Date.parse("16/10/1958") },
+  { :name => "Harrison Ford", :dob => Date.parse("13/07/1942") },
+  { :name => "Morgan Freeman", :dob => Date.parse("06/01/1937") }
 ]
 
 movies = [
