@@ -30,10 +30,10 @@ actors = [
 
 movies = [
   { :title => "Star Wars: A New Hope", :year => 1977, :director => "George Lucas" },
-  { :title => "E.T.", :year => 1977, :director => "Steven Spielberg" },
-  { :title => "Raiders of the Lost Ark", :year => 1977, :director => "Steven Spielberg" },
-  { :title => "Apollo 13", :year => 1977, :director => "Ron Howard" },
-  { :title => "Minority Report", :year => 1977, :director => "Steven Spielberg" },
+  { :title => "E.T.", :year => 1982, :director => "Steven Spielberg" },
+  { :title => "Raiders of the Lost Ark", :year => 1981, :director => "Steven Spielberg" },
+  { :title => "Apollo 13", :year => 1995, :director => "Ron Howard" },
+  { :title => "Minority Report", :year => 2002, :director => "Steven Spielberg" },
   { :title => "The Dark Knight", :year => 2008, :director => "Christopher Nolan" },
   { :title => "The Godfather", :year => 1972, :director => "Francis Ford Coppola" },
   { :title => "The Godfather: Part II", :year => 1974, :director => "Francis Ford Coppola" },
