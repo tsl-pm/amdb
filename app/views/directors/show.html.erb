@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b>Dob:</b>
+  <%= @director.dob %>
+</p>
+
+<p>
   <b><%= pluralize(@director.movies.count, "Movie") %></b>
   <ul>
   <% @director.movies.each do |movie| %>
