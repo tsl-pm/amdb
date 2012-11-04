@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Director.destroy_all
+Actor.destroy_all
 Movie.destroy_all
 Role.destroy_all
 
