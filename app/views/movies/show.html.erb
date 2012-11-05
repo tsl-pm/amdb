@@ -16,10 +16,10 @@
 </p>
 
 <p>
-  <b><%= pluralize(@movie.roles.count, "Role") %></b>
+  <b>Cast</b>
   <ul>
-  <% @movie.roles.each do |role| %>
-    <li><%= role.name %></li>
+  <% @movie.actors.each do |actor| %>
+    <li><%= actor.name %></li>
   <% end %>
   </ul>
 </p>

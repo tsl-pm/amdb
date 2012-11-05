@@ -11,10 +11,10 @@
 </p>
 
 <p>
-  <b>Roles:</b>
+  <b>Filmography:</b>
   <ul>
-    <% @actor.roles.each do |role| %>
-      <li><%= role.name %></li>
+    <% @actor.movies.each do |movie| %>
+      <li><%= movie.title %></li>
     <% end %>
   </ul>
 </p>
