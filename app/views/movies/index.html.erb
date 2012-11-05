@@ -5,6 +5,7 @@
     <th>Title</th>
     <th>Year</th>
     <th>Director</th>
+    <th>Votes</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= movie.title %></td>
     <td><%= movie.year %></td>
     <td><%= movie.director.name %></td>
+    <td><%= movie.votes.count %></td>
     <td><%= link_to 'Show', movie %></td>
     <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
     <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>

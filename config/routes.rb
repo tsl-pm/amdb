@@ -1,5 +1,9 @@
 Amdb::Application.routes.draw do
   
+  resources :votes
+
+  resources :users
+
   resources :actors
 
   root :to => 'Movies#index'
