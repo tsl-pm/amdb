@@ -2,6 +2,7 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
+    cookies["hello"] = "Wazzzzup"
     @movies = Movie.all.sort {|x, y| y.votes.count <=> x.votes.count }
 
     respond_to do |format|
@@ -14,6 +15,7 @@ class MoviesController < ApplicationController
   # GET /movies/1.json
   def show
     @movie = Movie.find(params[:id])
+    cookies["last_movie"] = @movie.title
     
     respond_to do |format|
       format.html # show.html.erb
