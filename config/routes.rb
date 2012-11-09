@@ -1,6 +1,6 @@
 Amdb::Application.routes.draw do
 
-  get '/login' => 'sessions#new'
+  get '/login' => 'sessions#new', :as => 'sign_in'
   get '/logout' => 'sessions#destroy'
   post 'sessions/create' => 'sessions#create'
   

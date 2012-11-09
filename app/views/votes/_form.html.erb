@@ -15,10 +15,6 @@
     <%= f.label :movie_id %><br />
     <%= f.collection_select :movie_id, Movie.order('title asc'), :id, :title %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.collection_select :user_id, User.all, :id, :name %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

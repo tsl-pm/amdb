@@ -24,11 +24,15 @@ class VotesController < ApplicationController
   # GET /votes/new
   # GET /votes/new.json
   def new
-    @vote = Vote.new
+    if session[:user_id].blank?
+      redirect_to sign_in_url
+    else
+      @vote = Vote.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @vote }
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @vote }
+      end
     end
   end
 
@@ -41,7 +45,8 @@ class VotesController < ApplicationController
   # POST /votes.json
   def create
     @vote = Vote.new(params[:vote])
-
+    @vote.user_id = session[:user_id]
+    
     respond_to do |format|
       if @vote.save
         format.html { redirect_to @vote, notice: 'Vote was successfully created.' }
