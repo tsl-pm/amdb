@@ -3,6 +3,11 @@ class SessionsController < ApplicationController
     
   end
   
+  def destroy
+    session[:user_id] = nil
+    redirect_to movies_url
+  end
+  
   def create
     user = User.find_by_email(params[:email])
     if user

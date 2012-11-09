@@ -1,6 +1,7 @@
 Amdb::Application.routes.draw do
 
   get '/login' => 'sessions#new'
+  get '/logout' => 'sessions#destroy'
   post 'sessions/create' => 'sessions#create'
   
   resources :votes
