@@ -17,9 +17,6 @@
     <%= link_to "Users", users_url %> |
     <%= link_to "Sign In", "/login" %> 
   </nav>
-  <% if cookies["user_id"].present? %>
-    <h2>You are <%= User.find_by_id(cookies["user_id"]).name %></h2>
-  <% end %>
   <%= yield %>
 
 </body>
